@@ -1,0 +1,20 @@
+<div class="container">
+    <app-card
+     *ngFor="let pokemon of pokemons"
+     [name]="pokemon.name"
+     [numberId]="pokemon.id"
+     [urlImg]="pokemon.image"
+     [urlData]="pokemon.url"
+     >
+    </app-card>
+</div>
+
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="setPageSizeOptions($event)"
+               showFirstLastButtons 
+               aria-label="Select page"
+               style="font-size: 20px;"
+               >
+</mat-paginator>
