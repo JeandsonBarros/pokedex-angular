@@ -2,7 +2,7 @@
 
 Pokédex website: https://pokedex-jeu.herokuapp.com/
 
-##Pokédex developed with Angular+Scss.
+## Pokédex developed with Angular+Scss.
 
 The purpose of this web application is to present the pokemon data, data that is obtained through the [pokeapi.co](https://pokeapi.co/) public API.
 
