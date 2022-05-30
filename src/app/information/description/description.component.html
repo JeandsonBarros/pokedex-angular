@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      <span>{{ description.name}}</span>
+      <span style="color: rgb(148, 148, 148);"> #{{description.id}}</span>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="description.imageUrl" alt="">
+  <mat-card-content>
+    <p>Height: {{description.height/10}}m</p>
+    <p>Weight: {{description.weight/10}}kg</p>
+    <p>
+      {{description.description}}
+    </p>
+  </mat-card-content>
+
+</mat-card>

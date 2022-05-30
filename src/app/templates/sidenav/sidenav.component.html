@@ -1,0 +1,33 @@
+<mat-sidenav-container (backdropClick)="sidenav.toggle()">
+  <mat-sidenav #sidenav disableClose>
+
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>closed</mat-icon>
+    </button>
+    <ul style="list-style-type:none;">
+
+      <li>
+        <h2>Types</h2>
+      </li>
+      <li *ngFor="let type of types">
+        <button (click)="sidenav.toggle()" [routerLink]="['pokemon/type/'+type]" mat-button>
+          <img [src]="'/assets/img/types/'+type+'.png'" alt=""> {{ type[0].toUpperCase() + type.substring(1) }}
+        </button>
+      </li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <app-header></app-header>
+
+    <button id="menu" mat-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon> Types
+    </button>
+
+    <router-outlet></router-outlet>
+
+    <app-footer></app-footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

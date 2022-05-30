@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title> <p>Type</p> </mat-card-title>
+    </mat-card-header>
+
+    <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+        <mat-chip [routerLink]="['/pokemon/type/'+typ]" *ngFor="let typ of type" [style.background]="typeColors[typ]">
+            {{typ}}
+        </mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-card-header>
+        <mat-card-title> <p>Weaknesses</p> </mat-card-title>
+    </mat-card-header>
+    <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+        <mat-chip  [routerLink]="['/pokemon/type/'+weaknesse]" *ngFor="let weaknesse of weaknesses" [style.background]="typeColors[weaknesse]">
+            {{weaknesse}}
+        </mat-chip>
+    </mat-chip-list>
+</mat-card>

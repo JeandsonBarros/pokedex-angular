@@ -1,0 +1,25 @@
+footer {
+    background-color: #DC0A2D;
+    height: 50px;
+    justify-content: center;
+    color: white;
+}
+
+footer::before {
+    content:'';
+    position:absolute;
+    right: 0;
+    margin-top: -28px;   
+    width: 46%;
+
+    border-left: 5rem solid transparent;
+    border-right: 1rem solid #DC0A2D;
+    border-bottom: 3rem solid #DC0A2D;
+   
+}
+
+
+a {
+    filter: drop-shadow(1px 1px 1px #222);
+    text-decoration: underline;
+}

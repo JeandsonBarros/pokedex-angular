@@ -1,18 +1,27 @@
-<mat-toolbar color="primary" class="mat-elevation-z5">
-  <button mat-icon-button class="example-icon" >
-    <mat-icon>menu</mat-icon>
+<mat-toolbar>
+ 
+  <button id="logo" mat-button [routerLink]="['']" class="example-icon">
+    <img src="/assets/img/header.png" height="40" alt="">
   </button>
 
-  <button mat-button [routerLink]="['']" class="example-icon" >
-    <img src="/assets/img/header.png" height="60" alt="">
-  </button>
+  <mat-form-field id="search" appearance="legacy">
+    <mat-label>Pokémon search</mat-label>
+    <input  (keyup)="search($event)" matInput placeholder="Pokémon name">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
 
-  <input class="search" placeholder="Buscar Pokémon">
-
-  <span class="example-spacer"></span>
-
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <img src="/assets/img/logo.png" width="50" alt="">
-  </button>
+  <mat-icon id="searchIcon" (click)="searchHiden = !searchHiden" matSuffix>
+    {{searchHiden? 'closed' : 'search'}}
+  </mat-icon>
 
 </mat-toolbar>
+
+<mat-form-field *ngIf="searchHiden" id="searchHiden" appearance="outline">
+  <mat-label>Pokémon search</mat-label>
+  <input  [(ngModel)]="searchName"  (keyup)="search($event)" matInput placeholder="Pokémon name">
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+
+
+
+

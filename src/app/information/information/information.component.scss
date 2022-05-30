@@ -1,0 +1,36 @@
+.container {
+  min-height: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 70px 1rem 30px 1rem;
+  padding: 10px;
+
+  /* From https://css.glass */
+  background: rgba(12, 207, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(12, 207, 255, 0.1);
+
+  * {
+    flex: 1;
+  }
+
+}
+
+.example-card {
+  max-width: 200px;
+  margin: 30px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+img {
+  filter: drop-shadow(5px 5px 5px #222);
+
+}

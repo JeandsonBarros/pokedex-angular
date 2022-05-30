@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      <span>Evolution</span>
+
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="" alt="">
+  <mat-card-content>
+
+    <div *ngFor="let name of names">
+     <h2><p>{{name.number}}º</p></h2>
+      <app-pokemon-card  [pokemonUrl]="'https://pokeapi.co/api/v2/pokemon/'+name.name">
+      </app-pokemon-card>
+    </div>
+
+  </mat-card-content>
+
+</mat-card>

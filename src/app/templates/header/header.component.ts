@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  searchHiden = false;
+  searchName = "";
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  search(event: Event){
+    const filterValue = (event.target as HTMLInputElement).value;
+   
+    if(filterValue!="")
+      this.router.navigate(['pokemon/search/'+filterValue])
+    else
+      this.router.navigate([''])
   }
 
 }

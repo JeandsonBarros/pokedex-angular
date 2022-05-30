@@ -1,0 +1,6 @@
+<mat-card [routerLink]="['/information/pokemon/'+name]">
+
+    <span>{{ name[0].toUpperCase() + name.substring(1) }} #{{numberId}}</span>
+    <img mat-card-image [src]="urlImg" alt="">
+
+</mat-card>

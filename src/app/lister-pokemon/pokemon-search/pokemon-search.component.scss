@@ -1,0 +1,14 @@
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 70rem;
+    margin: 5%;
+    background: rgba(12, 207, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(12, 207, 255, 0.1);
+}

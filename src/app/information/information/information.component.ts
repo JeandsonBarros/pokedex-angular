@@ -8,19 +8,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InformationComponent implements OnInit {
 
-  name = "";
-
+  url = "";
+ 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(param => {
-      this.name = param["name"]
 
-      fetch("https://pokeapi.co/api/v2/pokemon/"+this.name).then(response => {
-        response.json().then(dataPokemon => console.log(dataPokemon))
-      })
-    
+    this.activatedRoute.params.subscribe(param => {
+     
+      let name = param["name"];
+      this.url = "https://pokeapi.co/api/v2/pokemon/" + name;
+      
     })
   }
+
+
 
 }

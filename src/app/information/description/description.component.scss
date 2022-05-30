@@ -1,0 +1,15 @@
+.example-card {
+ 
+  margin: 5px;
+  height: 28rem;
+  overflow-y: auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+img {
+  filter: drop-shadow(5px 5px 5px #222);
+}

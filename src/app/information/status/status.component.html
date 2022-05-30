@@ -1,0 +1,14 @@
+<mat-card class="example-card" >
+    <mat-card-header>
+        <mat-card-title> <p>Stats</p> </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>    
+        <p *ngFor="let stat of status"> 
+            {{ (stat.name[0].toUpperCase() + stat.name.substring(1)).replaceAll("-", " ") }}
+            <mat-progress-bar mode="determinate" [value]="(stat.baseStat/255)*100"></mat-progress-bar> {{stat.baseStat.toFixed(2)}}
+        </p>
+       
+      </mat-card-content>
+
+</mat-card>
