@@ -6,6 +6,8 @@ Pokédex website: https://pokedex-jeu.herokuapp.com/
 
 The purpose of this web application is to present the pokemon data, data that is obtained through the [pokeapi.co](https://pokeapi.co/) public API.
 
+![Figure 1](./Captura.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
 ## Development server
